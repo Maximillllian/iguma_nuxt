@@ -1,0 +1,218 @@
+@import url('./font/fonts.css');
+
+:root {
+    --black: #00241b;
+    --lightBlack: rgba(0, 36, 27, .7);
+    --experementBackground: #073232;    
+    --background: #f5f5f5;
+    --border: #edeef1;
+    --green: #7ccf9e;
+}
+
+/* General */
+
+html {
+    font-family: 'Geometria', Arial, sans-serif;
+    font-size: 16px;
+    color: var(--black);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.fullpage {
+    padding: 0 50px;
+}
+@media screen and (max-width: 1199.98px) {
+    .fullpage {
+        padding: 0 20px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+a.btn {
+    padding: 15px 30px;
+    border: 1px solid var(--black);
+    border-radius: 3px;
+
+    transition: all .15s ease-in;
+}
+
+a.btn:hover {
+    background-color: var(--lightBlack);
+    color: var(--green)
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+
+    background-color: rgba(255, 255, 255, .7);
+    backdrop-filter: saturate(1) blur(20px);
+    -o-backdrop-filter: saturate(1) blur(20px);
+    -webkit-backdrop-filter: saturate(1) blur(20px);
+    -moz-backdrop-filter: saturate(1) blur(20px);
+
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+}
+
+.header__inner {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    max-width: 115px;
+}
+
+header nav {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    margin-left: auto;
+}
+
+header nav a {
+
+}
+
+/* Main */
+
+main {
+    position: relative;
+    padding-top: 80px;
+}
+
+/* Banner */
+
+#banner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-areas: 
+        "union-1 description image"
+        "union-2 telegram image";
+}
+
+#banner .union {
+    grid-area: union-image;
+    justify-self: center;
+    object-fit: cover;
+    max-width: 100px;
+}
+#banner .union.first {
+    grid-area: union-1;
+    align-self: flex-end;
+}
+#banner .union.second {
+    grid-area: union-2;
+    align-self: flex-start;
+}
+#banner .description {
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#banner .clip-img {
+    grid-area: image;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+#banner .telegram {
+    grid-area: telegram;
+    align-self: center;
+
+    display: flex;
+    align-items: center;
+} 
+
+#banner .union img {
+}
+
+#banner h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+#banner p {
+    font-size: 1.5rem;
+}
+
+#banner .beehive {
+    position: relative;
+    display: flex;
+    gap: 3px;
+    height: 35px;
+}
+
+#banner .beehive-second {
+    margin-left: 17.5px;
+    top: -3px;
+}
+
+#banner .beehive img {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+#banner .clip-img img {
+    max-width: 100%;
+    clip-path: url(#hexagon-clip);
+}
+
+#banner .telegram svg {
+    height: 100px;
+}
+
+#banner .telegram path {
+    stroke: var(--black);
+    stroke-width: 2px;
+}
+
+#banner .telegram .btn {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+/* SVG */
+
+#hexagonMask {
+    width: 0;
+    height: 0;
+}
+
+#hexagonMask polygon {
+    stroke: var(--black);
+    stroke-width: 5px;
+}
+
+.hexagonBorder:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--border);
+    clip-path: polygon(100% 50%, 75% 93.33%, 25% 93.33%, 0% 50%, 25% 6.66%, 75% 6.66%);
+    -webkit-clip-path: polygon(1 0.5, 0.75 0.9333, 0.25 0.933, 0 0.5, 0.25 0.0666, 0.75 0.0666);
+}
