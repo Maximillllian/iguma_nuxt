@@ -243,8 +243,6 @@ export default {
   },
   mounted() {
 
-console.warn('Привет');
-
 let black = '#00241b';
 let white = '#f5f5f5';
 let green = '#7ccf9e';
@@ -282,7 +280,7 @@ function shuffleArrayWithColor(array, colors) {
 
 
 shuffleArrayWithColor(introWords, colors);
-console.log(introWords);
+
 let sliderTl = gsap.timeline({repeat: -1, paused: true});
 introWords.forEach(word => {
     let localTl = gsap.timeline({yoyo: true, repeat: 1, repeatDelay: 1});
@@ -333,23 +331,23 @@ blackLetters = gsap.utils.toArray(blackLetters);
 
 
 
-let darkBgTl = gsap.timeline({
-    scrollTrigger: {
-        trigger: sphereSection,
-        scrub: true,
-        start: "top center",
-        end: "center center"
-    },
-    defaults: {
-        ease: "power4.out"
-    },
-    paused: true
-});
-darkBgTl
-        .to(sections, {background: black, color: white, stroke: green, fill: green})
-        .to(header, {backgroundColor: black, color: green, borderBottom: '0px'}, 0)
-        .to(blackLetters, {fill: "var(--background)"}, 0)
-        .from(spherePaths, {drawSVG: 0})
+// let darkBgTl = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: sphereSection,
+//         scrub: true,
+//         start: "top center",
+//         end: "center center"
+//     },
+//     defaults: {
+//         ease: "power4.out"
+//     },
+//     paused: true
+// });
+// darkBgTl
+//         .to(sections, {background: black, color: white, stroke: green, fill: green})
+//         .to(header, {backgroundColor: black, color: green, borderBottom: '0px'}, 0)
+//         .to(blackLetters, {fill: "var(--background)"}, 0)
+//         .from(spherePaths, {drawSVG: 0})
 
   }
 }
