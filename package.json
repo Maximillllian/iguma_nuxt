@@ -14,5 +14,8 @@
     "gsap": "file:gsap-bonus.tgz",
     "nuxt": "^2.15.7"
   },
+  "engines": {
+    "node": "v14.17.6"
+  },
   "devDependencies": {}
 }
