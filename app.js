@@ -1,8 +1,10 @@
-import { DrawSVGPlugin } from './node_modules/gsap/DrawSVGPlugin.js';
-import { ScrollToPlugin } from './node_modules/gsap/ScrollToPlugin.js';
-import { TextPlugin } from './node_modules/gsap/TextPlugin.js';
+// import { DrawSVGPlugin } from '~/node_modules/gsap/DrawSVGPlugin.js';
+// import { ScrollToPlugin } from '~/node_modules/gsap/ScrollToPlugin.js';
+// import { TextPlugin } from '~/node_modules/gsap/TextPlugin.js';
 
-gsap.registerPlugin(DrawSVGPlugin, ScrollToPlugin, TextPlugin);
+// gsap.registerPlugin(DrawSVGPlugin, ScrollToPlugin, TextPlugin);
+
+console.warn('Привет');
 
 let black = '#00241b';
 let white = '#f5f5f5';

@@ -1,4 +1,4 @@
-@import url('./font/fonts.css');
+@import url('../font/fonts.css');
 
 :root {
     --black: #00241b;
@@ -248,7 +248,7 @@ main {
 
 #banner .beehive-second {
     margin-left: 17.5px;
-    top: -3px;
+    top: -4.5px;
 }
 
 #banner .beehive img {
@@ -323,12 +323,12 @@ main {
 
 /* Spheres */
 
-#spheres {
+#sphere__section {
     position: relative;
     stroke: var(--black);
 }
 
-#spheres h1 {
+#sphere__section h1 {
     position: absolute;
     right: 0;
     top: 0;
@@ -336,41 +336,41 @@ main {
     margin: 0;
 }
 
-#spheres svg text {
+#sphere__section svg text {
     text-anchor: middle;
     font-size: 1.5rem;
 }
 
-#spheres svg .title {
+#sphere__section svg .title {
     font-size: 3rem;
 }
 
-#spheres svg path {
+#sphere__section svg path {
     fill: none;
     stroke-width: 1px;
 }
 
-#spheres svg .top {
+#sphere__section svg .top {
     transform: translate(550px, 657px);
 }
 
-#spheres svg .right {
+#sphere__section svg .right {
     transform: translate(700px, 690px)
 }
 
-#spheres svg .bottom {
+#sphere__section svg .bottom {
     transform: translate(575px, 775px)
 }
 
-#spheres svg .left {
+#sphere__section svg .left {
     transform: translate(500px, 690px)
 }
 
-#spheres .sphere text {
+#sphere__section .sphere text {
     transform: translate(0, -70px);
 }
 
-#spheres .sphere image {
+#sphere__section .sphere image {
     transform: translate(-60px, -210px)
 }
 
