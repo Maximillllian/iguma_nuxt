@@ -230,13 +230,9 @@ import { gsap } from "gsap";
 import { DrawSVGPlugin } from '~/node_modules/gsap/DrawSVGPlugin.js';
 import { ScrollToPlugin } from '~/node_modules/gsap/ScrollToPlugin.js';
 import { TextPlugin } from '~/node_modules/gsap/TextPlugin.js';
-import { ScrollTrigger } from '~/node_modules/gsap/ScrollTrigger.js';
 
 if (process.client) {
   gsap.registerPlugin(DrawSVGPlugin, ScrollToPlugin, TextPlugin);
-  gsap.registerPlugin(ScrollTrigger)
-  console.log(ScrollTrigger)
-  console.log(TextPlugin)
 }
 
 export default {
