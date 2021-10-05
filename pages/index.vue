@@ -19,16 +19,22 @@
                       </g>
                   </svg>
               </a>
+              <div id="burger">
+                <div class="first"></div>
+                <div class="second"></div>
+                <div class="third"></div>
+              </div>
               <nav>
                   <a href="#about">О проекте</a>
                   <a href="#howToBuy">Как купить?</a>
                   <a href="#tokenomics">Токеномика</a>
                   <a href="#roadmap">Дорожная карта</a>
+                  <a href="#" id="telegram-nav" class="btn">Telegram</a>
               </nav>
           </div>
       </div>
-        </header>
-        <main>
+    </header>
+    <main>
       <section class="fullpage" id="banner">
           <img class="union first" src="img/banner-union.png" alt="">
           <img class="union second" src="img/banner-union.png" alt="">
@@ -77,6 +83,11 @@
               <a href="#" class="btn">Telegram<br>@NFTBOT</a>
               <!-- <h2>Здесь будет телега</h2> -->
           </div>
+          <div class="words-monitor">
+            <h2 class="first"></h2>
+            <h2 class="second"></h2>
+            <h2 class="third"></h2>
+          </div>
       </section>
       <section id="about">
           <div class="container">
@@ -113,7 +124,9 @@
       </section>
       <section id="sphere__section">
           <div class="container">
-              <h1>А что с этим делать?</h1>
+              <div class="title">
+                <h1>А что с этим делать?</h1>
+              </div>
               <svg viewBox="0 0 1200 1314" xmlns="http://www.w3.org/2000/svg">
                   <text class="title" x="600" y="657">
                       <tspan x="600" dy="1em">Сферы</tspan> <tspan x="600" dy="1em">применения</tspan></text>
@@ -210,8 +223,11 @@
       </section>
         </main>
         <div class="intro">
-      <h1>?</h1>
-      <button>start</button>
+          <div class="text">
+            <h1 class="static">IGUMA - это</h1>
+            <h1 class="code-text"></h1>
+          </div>
+          <button>start</button>
         </div>
         <svg id="hexagonMask">
       <defs>
@@ -230,9 +246,10 @@ import { gsap } from "gsap";
 import { DrawSVGPlugin } from '~/node_modules/gsap/DrawSVGPlugin.js';
 import { ScrollToPlugin } from '~/node_modules/gsap/ScrollToPlugin.js';
 import { TextPlugin } from '~/node_modules/gsap/TextPlugin.js';
+import { ScrollTrigger } from '~/node_modules/gsap/ScrollTrigger.js';
 
 if (process.client) {
-  gsap.registerPlugin(DrawSVGPlugin, ScrollToPlugin, TextPlugin);
+  gsap.registerPlugin(DrawSVGPlugin, ScrollToPlugin, TextPlugin, ScrollTrigger);
 }
 
 export default {
@@ -254,7 +271,7 @@ let sections = gsap.utils.toArray('section');
 
 // Scroll to top when reloading page
 window.onbeforeunload = () => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
 };
 
 
@@ -262,8 +279,12 @@ window.onbeforeunload = () => {
 
 // Intro page
 
-let introTextField = document.querySelector('.intro h1');
-let introWords = ['NFT', 'аватар', 'DeepFake', 'Digital', 'Human', 'метавселенная'];
+let introSlider = document.querySelector('.intro')
+let introTextField = document.querySelector('.intro h1.code-text');
+let introButton = document.querySelector('.intro button')
+let introWords = ['аватар', 'DeepFake', 'цифровая_личность', 'метавселенная', 
+                  'безопасность', 'цифровой_актив', 'Вы'];
+let igumaIs = document.querySelector('.intro .static');
 let colors = [white, green];
 
 
@@ -281,21 +302,28 @@ function shuffleArrayWithColor(array, colors) {
 
 shuffleArrayWithColor(introWords, colors);
 
-let sliderTl = gsap.timeline({repeat: -1, paused: true});
+let sliderTl = gsap.timeline();
+sliderTl
+        .to(igumaIs, {x: "0", opacity: 1, duration: .5, delay: .5})
+        .to(introButton, {opacity: 1}, "0+=.75")
+
+
+let sliderWordsTl = gsap.timeline({repeat: -1});
 introWords.forEach(word => {
-    let localTl = gsap.timeline({yoyo: true, repeat: 1, repeatDelay: 1});
-    localTl.to(introTextField, {text: word[0], color: word[1], duration: .5, delay: .5});
-    sliderTl.add(localTl);
+    let localTl = gsap.timeline({repeatDelay: .5, repeat: 1, yoyo: true});
+    localTl.to(introTextField, {text: {value: word[0]+'.', delimiter: ""}, duration: .5});
+    sliderWordsTl.add(localTl);
 });
 
-sliderTl.play();
+sliderTl.add(sliderWordsTl);
 
 // Intro main page
 
 let startButton = document.querySelector('.intro button');
-startButton.addEventListener('click', () => introTl.play());
+startButton.addEventListener('click', () => {
+  introTl.play();
+});
 
-let introSlider = document.querySelector('.intro')
 let bannerTitle = document.querySelector('#banner .description h1');
 let bannerImage = document.querySelector('#banner .clip-img img');
 let bannerDescription = document.querySelector('#banner .description p');
@@ -305,11 +333,13 @@ let unions = gsap.utils.toArray('#banner img.union');
 let telegramSVG = document.querySelector('#banner .telegram svg');
 let telegramPath = document.querySelector('#banner .telegram path');
 let telegramButton = document.querySelector('#banner .telegram a');
+let wordsMonitor = document.querySelector('.words-monitor');
 let notBannerSection = gsap.utils.toArray('main section:not(:first-child)');
 
 let introTl = gsap.timeline({paused: true});
 introTl.to(window, {scrollTo: "0", duration: .25})
        .to(introSlider, {y: "100%", duration: .5})
+       .call(() => introSlider.classList.toggle('hidden'))
        .from(bannerTitle, {x: "-100%", y: "0", opacity: 0})
        .from(bannerDescription, {x: "-100%", y: "0", opacity: 0}, "-=.35")
        .from(bannerImage, {x: "100%", opacity: 0}, "-=.35")
@@ -321,33 +351,105 @@ introTl.to(window, {scrollTo: "0", duration: .25})
        .from(telegramSVG, {y: "100%", opacity: 0}, "startBeehives-=.35")
        .from(telegramPath, {drawSVG: "0%"}, "startBeehives")
        .from(telegramButton, {opacity: 0}, "startBeehives+=.3")
+       .from(wordsMonitor, {x: "100%", opacity: 0}, "startBeehives+=.3")
        .from(notBannerSection, {opacity: 0});
 
+
+// Burger menu animation
+
+function showBurgerMenu() {
+  headerNav.classList.toggle('active');
+  headerNav.classList.toggle('shadow');
+  burger.classList.toggle('active');
+}
+
+let burger = document.querySelector('#burger');
+let headerNav = document.querySelector('header nav');
+let main = document.querySelector('main');
+let navLinks = document.querySelectorAll('header nav a');
+
+let mobileMedia = window.matchMedia('screen and (max-width: 767px)');
+
+if (mobileMedia.matches) {
+  burger.addEventListener('click', () => showBurgerMenu());
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => showBurgerMenu())
+  });
+};
+
+// Words monitor in #banner (random show words in div)
+
+
+function randomNummberInRange(n) {
+  let randomNumner = Math.ceil(Math.random() * n);
+  return Number(randomNumner);
+};
+
+function chooseMonitorPlace() {
+  let choosenMonitorTitle = wordsMonitorTitles[randomNummberInRange(3)-1];
+  return choosenMonitorTitle;
+};
+
+function chooseMonitorWord() {
+  let choosenWord = introWords[randomNummberInRange(introWords.length-1)];
+  return String(choosenWord[0]);
+};
+
+function wordsMonitorAnimate() {
+  let place = chooseMonitorPlace();
+  let word =  chooseMonitorWord(); 
+  let wordsMonitorTl = gsap.timeline({
+    onComplete: wordsMonitorAnimate,
+    defaults: {ease: "power4.out"}
+    });
+  wordsMonitorTl.to(place, {text: {value: word, delimiter: " "}, delay: 1, opacity: Math.random(), duration: .5})
+                .to(place, {text: {value: " ", delimiter: " "}, opacity: 0});
+};
+
+let wordsMonitorTitles = document.querySelectorAll('.words-monitor h2');
+
+wordsMonitorAnimate();
+
 // White bg to dark bg animation
+let burgerLines = gsap.utils.toArray('#burger div');
 let sphereSection = document.querySelector('section#sphere__section');
 let spherePaths = gsap.utils.toArray('#sphere__section path');
 let blackLetters = logo.getElementById('#000000ff').querySelectorAll('path');
 blackLetters = gsap.utils.toArray(blackLetters);
 
 
+// When scrolling to #sphere__section, colors changes to dark
+window.addEventListener('scroll', () => {
+  let sphereTop = sphereSection.getBoundingClientRect().top;
+  if (sphereTop <= 200) {
+    darkBgTl.play();
+  } else {
+    darkBgTl.reverse();
+  }
+});
 
-// let darkBgTl = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: sphereSection,
-//         scrub: true,
-//         start: "top center",
-//         end: "center center"
-//     },
-//     defaults: {
-//         ease: "power4.out"
-//     },
-//     paused: true
-// });
-// darkBgTl
-//         .to(sections, {background: black, color: white, stroke: green, fill: green})
-//         .to(header, {backgroundColor: black, color: green, borderBottom: '0px'}, 0)
-//         .to(blackLetters, {fill: "var(--background)"}, 0)
-//         .from(spherePaths, {drawSVG: 0})
+let darkBgTl = gsap.timeline({
+    // scrollTrigger: {
+    //     trigger: sphereSection,
+    //     scrub: true,
+    //     start: "top center",
+    //     end: "center center"
+    // },
+    defaults: {
+        ease: "power1.out"
+    },
+    paused: true
+});
+
+darkBgTl.addLabel('start')
+        // .to(header, {background: white}, "start")
+        .to('body', {background: black, ease: "power1.out"}, "start")
+        .to(sections, {background: black, color: white, stroke: green, fill: green}, "start")
+        .to(header, {background: black, color: green, borderBottom: '0px', ease: "power4.out"}, "start")
+        .to(burgerLines, {backgroundColor: white}, "start")
+        .to(blackLetters, {fill: "var(--background)"}, "start")
+        .from(spherePaths, {drawSVG: 0})
 
   }
 }

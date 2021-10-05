@@ -3,7 +3,8 @@
 :root {
     --black: #00241b;
     --lightBlack: rgba(0, 36, 27, .7);
-    --experementBackground: #073232;    
+    --experementBackground: #073232;
+    --gray: #275654;    
     --background: #f5f5f5;
     --border: #edeef1;
     --green: #7ccf9e;
@@ -12,21 +13,36 @@
 
 /* General */
 
+* {
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
 html {
     font-family: 'Geometria', Arial, sans-serif;
     font-size: 16px;
     color: var(--black);
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
-    margin-top: 80px;
+    /* margin-top: 80px; */
+    width: 100%;
+    height: 100%;
     overflow-x: hidden;
+    background-color: var(--background);
 }
 
 main section, footer {
-    padding-top: 80px;
-    /* margin-top: -80px; */
+    /* padding-top: 80px;
+    box-sizing: border-box;
+    margin-top: -80px; */
+}
+@media screen and (max-width: 767.98px) {
+    main section {
+        padding-top: 20px;
+    }
 }
 
 .container {
@@ -38,6 +54,14 @@ main section, footer {
 
 .fullpage {
     padding: 0 50px;
+    /* margin: 0 auto; */
+}
+@media screen and (min-width: 1440px) {
+    .fullpage {
+        max-width: 1400px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 @media screen and (max-width: 1199.98px) {
     .fullpage {
@@ -54,6 +78,7 @@ a.btn {
     padding: 15px 30px;
     border: 1px solid var(--black);
     border-radius: 3px;
+    font-size: 1.5rem;
 
     transition: all .15s ease-in;
 }
@@ -62,9 +87,37 @@ a.btn:hover {
     background-color: var(--lightBlack);
     color: var(--border)
 }
+@media screen and (max-width: 575.98px) {
+    a.btn {
+        font-size: 1rem;
+    }
+}
 
 h1 {
     font-size: 3rem;
+}
+@media screen and (max-width: 991.98px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 567.98px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+p {
+    font-size: 1.5rem;
+}
+@media screen and (max-width: 575.98px) {
+    p {
+        font-size: 1rem;
+    }
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 /* Styles */
@@ -74,6 +127,12 @@ h1 {
     color: var(--green);
     fill: var(--green);
     stroke: var(--green);
+}
+
+.shadow {
+    -webkit-box-shadow: -6px 1px 18px -3px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: -6px 1px 18px -3px rgba(34, 60, 80, 0.2);
+    box-shadow: -6px 1px 18px -3px rgba(34, 60, 80, 0.2);
 }
 
 /* .dark:before {
@@ -93,8 +152,8 @@ h1 {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100vw;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -105,22 +164,44 @@ h1 {
 
     background-color: var(--black);
     color: var(--background);
+    overflow-x: hidden;
     /* transform: translateY(-100%); */
 }
 
+.intro .text {
+    width: 80%;
+    margin: 0 20vw;
+}
+
+.intro .static {
+    position: relative;
+    left: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    /* width: 4 0vw; */
+}
+
+.intro .code-text {
+    text-transform: capitalize;
+    color: var(--green);
+}
+
 .intro h1 {
-    font-size: 5rem;
+    display: inline-block;
+    font-size: 4vw;
 }
 
 .intro button {
-    padding: 10px 60px;
+    padding: 1vw 6vw;
     color: var(--green);
+    opacity: 0;
     border: 1px solid var(--green);
     border-radius: 40px;
     background: transparent;
 
-    font-size: 3rem;
+    font-size: 3vw;
     cursor: pointer;
+    transition: all .15s ease-out;
 }
 
 .intro button:hover {
@@ -132,12 +213,13 @@ h1 {
 /* Header */
 
 header {
-    position: fixed;
+    position: sticky;
+    /* overflow-x: hidden; */
     top: 0;
     width: 100%;
-    height: 80px;
+    height: 79px;
 
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(245, 245, 245, 1);
     backdrop-filter: saturate(1) blur(20px);
     -o-backdrop-filter: saturate(1) blur(20px);
     -webkit-backdrop-filter: saturate(1) blur(20px);
@@ -149,7 +231,7 @@ header {
 
 @supports (backdrop-filter: none) or (-webkit-backdrop-filter: none) {
     header {
-        background-color: rgba(255, 255, 255, .7);
+        background-color: rgba(245, 245, 245, .7);
     }
 }
 
@@ -157,6 +239,7 @@ header {
     padding: 15px 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 header #logo {
@@ -165,16 +248,84 @@ header #logo {
 }
 
 header nav {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-
-    margin-left: auto;
 }
 
-header nav a {
+#telegram-nav {
+    display: none;
+}
 
+#burger {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: none;
+}
+
+#burger div {
+    height: 1px;
+    background-color: var(--black);
+
+    transition: all .3s ease-in-out;
+    transform-origin: 13%; 
+}
+#burger.active .first {
+    transform: rotate(45deg);
+}
+#burger.active .second {
+    opacity: 0;
+}
+#burger.active .third {
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 767.98px) {
+    header nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        max-width: 300px;
+        height: 100vh;
+
+        padding: 20px;
+        padding-top: 80px;
+        background-color: var(--background);
+        box-shadow: -6px 1px 8px 0px rgba(34, 60, 80, 0.2);
+        
+        flex-direction: column;
+        align-items: initial;
+        justify-content: initial;
+
+        font-size: 1rem;
+
+        transform: translateX(100%);
+        transition: all .3s ease-in-out;
+    }
+
+    #telegram-nav {
+        display: block;
+        margin: auto 20px 0 20px;
+        padding: 10px 20px;
+        background-color: var(--green);
+        border: var(--green);
+        color: var(--border);
+        font-weight: 300;
+    }
+    header nav.active{
+        transform: translateX(0);
+    }
+
+
+
+    #burger {
+        z-index: 1000;
+        display: flex;
+    }
 }
 
 /* Main */
@@ -217,7 +368,7 @@ main {
 #banner .clip-img {
     grid-area: image;
     position: relative;
-    max-width: 100%;
+    min-width: 100%;
     max-height: 100%;
 }
 #banner .telegram {
@@ -232,11 +383,8 @@ main {
 }
 
 #banner h1 {
+    grid-area: title;
     margin: 0;
-}
-
-#banner p {
-    font-size: 1.5rem;
 }
 
 #banner .beehive {
@@ -258,6 +406,7 @@ main {
 
 #banner .clip-img img {
     max-width: 100%;
+    min-width: 260px;
     clip-path: url(#hexagon-clip);
 }
 
@@ -271,13 +420,123 @@ main {
 }
 
 #banner .telegram .btn {
-    font-size: 1.5rem;
     margin-bottom: 40px;
     padding: 10px 60px;
     text-align: center;
 }
 
+#banner .words-monitor {
+    display: none;
+    /* opacity: 0; */
+}
+
+@media screen and (max-width: 1199.98px) {
+    #banner {
+        grid-template-columns: 4fr 3fr;
+        grid-template-areas:
+            "description image"
+            "telegram image";
+    }
+    #banner .union {
+        display: none;
+    }
+}
+@media screen and (max-width: 991.98px) {
+    #banner {
+        grid-template-columns: 4fr 3fr;
+        gap: 40px;
+        grid-template-areas:
+            "description words-monitor"
+            "description words-monitor"
+            "telegram telegram";
+    }
+
+    #banner .words-monitor {
+        grid-area: words-monitor;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #banner .clip-img {
+        display: none;
+    }
+}
+@media screen and (max-width: 767.98px) {
+    #banner {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px; */
+        grid-template-columns: 4fr 3fr;
+        /* gap: 40px;
+        grid-template-areas:
+            "description image"
+            "description image"
+            "telegram telegram"; */
+
+    }
+
+    #banner .beehive {
+        gap: 2.5px;
+        height: 25px;
+        justify-content: center;
+    }
+
+    #banner .beehive-second {
+        right: -2.5px;
+    }
+
+    #banner .beehive img {
+        max-width: 25px;
+        max-height: 25px;
+    }
+
+    #banner .clip-img {
+        display: none;
+    }
+
+    /* #banner .words-monitor {
+        display: none;
+    } */
+}
+@media screen  and (max-width: 567.98px) {
+    #banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        
+    }
+    
+    #banner svg {
+        display: none;
+    }
+
+    #banner .beehives {
+
+    }
+
+    #banner .telegram .btn {
+        margin-bottom: 0;
+    }
+
+    #banner .words-monitor {
+        display: none;
+    }
+}
+
 /* About */
+
+#about {
+    padding-bottom: 80px;
+}
+@media screen and (max-width: 767.98px) {
+    #about {
+        padding-bottom: 20px;
+    }
+}
 
 #about .descriptions {
     display: flex;
@@ -291,6 +550,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
 #about .description:after {
@@ -299,15 +559,14 @@ main {
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
-    width: 400px;
-    /* height: 1px; */
-    /* background-color: var(--experementBackground); */
+    width: 30vw;
+    background-color: var(--background);
     border-bottom: 1px solid var(--experementBackground);
     border-radius: 5px;
+    z-index: 0;
 }
 
 #about .description p {
-    font-size: 1.5rem;
     flex-basis: 66.66%;
 }
 
@@ -319,6 +578,25 @@ main {
 
 #about .description.right p {
     order: 1;
+}
+
+@media screen and (max-width: 767.98px) {
+    #about .descriptions {
+        gap: 50px;  
+    }
+    
+    #about .description img {
+        max-width: 79px;
+        /* margin: 0 auto; */
+    }
+
+    #about .description.right p{
+        /* text-align: right; */
+    }
+
+    #about .description p {
+        flex-basis: 80%;
+    }
 }
 
 /* Spheres */
@@ -335,10 +613,26 @@ main {
     text-align: end;
     margin: 0;
 }
+@media screen and (max-width: 767.98px) {
+    #sphere__section .title {
+        display: flex;
+        justify-content: flex-end;
+    }
+    #sphere__section h1 {
+        position: relative;
+        right: 0;
+        text-align: right;
+    }
+}
 
 #sphere__section svg text {
     text-anchor: middle;
     font-size: 1.5rem;
+}
+@media screen and (max-width: 567.98px) {
+    #sphere__section svg text {
+        font-size: 2rem;
+    }
 }
 
 #sphere__section svg .title {
@@ -372,6 +666,12 @@ main {
 
 #sphere__section .sphere image {
     transform: translate(-60px, -210px)
+}
+
+@media screen and (max-width: 567.98px) {
+    #sphere__section svg {
+
+    }
 }
 
 /* SVG */
