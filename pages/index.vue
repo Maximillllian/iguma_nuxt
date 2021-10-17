@@ -1,39 +1,5 @@
 <template>
   <div>
-    <header>
-      <div class="container">
-          <div class="header__inner">
-              <a href="#">
-                  <svg id="logo" viewBox="0 0 546 232" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                      <g id="#00d188ff">
-                      <path fill="#00d188" opacity="1.00" d=" M 24.92 8.78 C 32.47 4.92 40.47 1.68 49.00 0.96 C 59.17 0.02 69.71 1.67 78.88 6.25 C 89.17 10.84 98.58 17.46 106.51 25.46 C 107.35 26.55 108.81 27.47 108.79 28.99 C 109.17 31.14 107.22 32.54 105.99 33.98 C 99.51 40.42 91.92 45.63 84.04 50.20 C 82.98 50.69 81.91 51.18 80.86 51.68 C 69.00 57.85 54.87 59.82 41.84 56.63 C 31.39 54.34 22.05 48.74 13.40 42.64 C 9.01 39.43 4.89 35.79 1.28 31.71 C 0.12 30.61 -0.03 28.41 1.11 27.25 C 7.75 19.60 16.22 13.84 24.92 8.78 M 49.92 7.61 C 46.40 8.96 42.75 10.32 39.99 13.00 C 33.04 18.57 30.92 28.73 33.86 36.94 C 35.72 42.81 40.62 47.25 46.11 49.76 C 47.66 50.30 49.22 50.82 50.77 51.38 C 59.86 52.77 69.32 48.16 73.93 40.24 C 77.31 34.17 77.73 26.53 74.72 20.23 C 71.84 13.84 65.67 9.54 59.08 7.60 C 56.03 7.36 52.97 7.37 49.92 7.61 Z" />
-                      <path fill="#00d188" opacity="1.00" d=" M 41.62 19.63 C 46.34 13.49 55.24 11.84 62.09 15.17 C 56.89 18.63 56.70 27.54 62.18 30.81 C 64.61 32.73 67.78 32.38 70.68 32.41 C 69.12 36.54 67.08 40.87 63.03 43.10 C 55.74 47.64 44.92 45.24 40.76 37.57 C 37.31 32.07 38.04 24.88 41.62 19.63 Z" />
-                      <path fill="#00d188" opacity="1.00" d=" M 196.62 130.05 C 196.63 110.62 196.62 91.20 196.63 71.77 C 204.49 71.74 212.35 71.74 220.22 71.77 C 220.25 91.18 220.16 110.59 220.26 130.00 C 220.66 136.42 221.83 143.61 226.88 148.11 C 228.13 149.28 229.50 150.32 230.86 151.37 C 236.29 153.69 242.22 154.12 248.03 153.32 C 249.11 152.99 250.19 152.64 251.26 152.27 C 255.30 150.41 259.13 147.67 261.19 143.61 C 263.68 138.46 264.43 132.66 264.51 127.00 C 264.50 108.58 264.50 90.17 264.51 71.75 C 272.17 71.75 279.83 71.75 287.50 71.75 C 287.36 92.87 287.78 114.00 287.28 135.11 C 286.30 139.45 285.91 143.96 284.18 148.11 C 280.21 159.67 269.91 168.75 258.05 171.53 C 251.74 166.21 243.22 165.70 235.37 166.65 C 233.91 167.19 232.44 167.72 230.98 168.26 C 228.96 169.24 227.01 170.35 225.06 171.48 C 214.29 168.26 205.13 160.36 200.57 150.05 C 200.51 149.81 200.40 149.32 200.34 149.07 C 199.27 146.79 198.52 144.39 198.02 141.93 C 197.24 138.01 196.63 134.04 196.62 130.05 Z" />
-                      <path fill="#00d188" opacity="1.00" d=" M 230.22 176.15 C 240.27 171.71 252.88 173.55 261.02 181.03 C 265.66 185.09 268.58 190.80 270.05 196.73 C 271.99 206.55 268.56 217.34 261.00 223.98 C 250.27 234.10 231.25 233.76 221.39 222.57 C 217.49 218.97 215.18 214.12 213.62 209.13 C 212.88 202.64 212.97 195.93 215.75 189.89 C 219.26 184.19 223.82 178.68 230.22 176.15 Z" />
-                      </g>
-                      <g id="#000000ff">
-                      <path fill="#000000" opacity="1.00" d=" M 123.92 71.08 C 136.36 69.13 149.51 69.80 161.23 74.70 C 167.83 77.50 173.49 82.05 178.40 87.21 C 173.40 91.97 168.33 96.66 163.25 101.33 C 157.57 95.53 150.21 90.83 141.95 90.17 C 131.96 88.73 121.15 91.65 113.93 98.89 C 107.16 104.85 104.64 114.29 104.87 123.04 C 105.16 132.48 109.28 142.29 117.41 147.55 C 128.08 155.40 143.19 155.50 154.72 149.47 C 154.63 139.77 154.75 130.08 154.65 120.39 C 156.73 120.12 158.83 119.81 160.94 119.99 C 166.13 120.43 171.35 119.18 176.50 120.35 C 176.38 133.83 176.43 147.31 176.48 160.78 C 161.80 171.74 142.47 175.60 124.53 172.71 C 113.24 171.06 102.82 165.22 94.73 157.28 C 88.45 150.26 83.69 141.64 81.99 132.31 C 80.17 120.72 80.93 108.22 86.72 97.77 C 93.81 83.50 108.32 73.61 123.92 71.08 Z" />
-                      <path fill="#000000" opacity="1.00" d=" M 40.51 71.75 C 48.38 71.75 56.25 71.75 64.12 71.75 C 64.13 105.13 64.11 138.50 64.13 171.87 C 56.25 171.88 48.38 171.87 40.51 171.88 C 40.50 138.50 40.50 105.13 40.51 71.75 Z" />
-                      <path fill="#000000" opacity="1.00" d=" M 310.00 71.75 C 316.03 71.81 322.05 71.64 328.08 71.79 C 329.56 71.58 330.31 73.09 331.02 74.09 C 342.77 93.88 354.76 113.52 366.59 133.26 C 370.75 127.33 374.08 120.88 377.98 114.79 C 385.53 101.52 393.70 88.61 401.18 75.30 C 402.15 73.92 402.87 71.62 404.96 71.79 C 410.93 71.63 416.90 71.81 422.87 71.75 C 422.90 96.16 422.84 120.56 422.90 144.96 C 423.45 153.90 423.14 162.86 423.23 171.81 C 415.91 171.95 408.60 171.83 401.29 171.89 C 401.50 153.58 400.75 135.25 401.83 116.97 C 401.97 115.43 401.29 114.02 400.64 112.68 C 401.53 117.51 401.83 122.45 400.85 127.30 C 400.45 123.05 400.71 118.76 400.51 114.50 C 397.18 117.06 395.89 121.23 393.69 124.65 C 386.25 136.75 379.13 149.04 371.88 161.26 C 368.25 161.38 364.61 161.37 360.99 161.28 C 351.54 145.61 342.02 130.00 332.47 114.40 C 332.15 133.49 332.34 152.59 332.37 171.68 C 324.92 172.07 317.46 171.79 310.00 171.88 C 310.00 138.50 310.00 105.13 310.00 71.75 Z" />
-                      <path fill="#000000" opacity="1.00" d=" M 433.24 171.74 C 448.22 138.45 462.88 105.03 477.91 71.77 C 485.61 71.75 493.32 71.70 501.03 71.80 C 508.31 87.41 514.91 103.33 522.22 118.93 C 529.83 136.67 538.19 154.08 545.66 171.88 C 537.50 171.67 529.30 172.28 521.18 171.59 C 517.95 164.64 515.13 157.49 512.29 150.37 C 496.86 150.41 481.42 150.28 465.99 150.44 C 463.66 157.81 459.97 164.65 457.26 171.88 C 449.26 171.79 441.24 172.04 433.24 171.74 M 488.68 96.21 C 483.88 108.35 478.64 120.33 473.95 132.51 C 484.21 132.61 494.47 132.55 504.74 132.55 C 504.62 132.11 504.39 131.22 504.28 130.78 C 499.20 119.53 494.81 107.97 490.14 96.54 C 489.77 96.46 489.05 96.29 488.68 96.21 Z" />
-                      </g>
-                  </svg>
-              </a>
-              <div id="burger">
-                <div class="first"></div>
-                <div class="second"></div>
-                <div class="third"></div>
-              </div>
-              <nav>
-                  <a href="#about">О проекте</a>
-                  <a href="#howToBuy">Как купить?</a>
-                  <a href="#tokenomics">Токеномика</a>
-                  <a href="#roadmap">Дорожная карта</a>
-                  <a href="#" id="telegram-nav" class="btn">Telegram</a>
-              </nav>
-          </div>
-      </div>
-    </header>
     <main>
       <section class="fullpage" id="banner">
           <img class="union first" src="img/banner-union.png" alt="">
@@ -80,7 +46,7 @@
                   <image href="img/telegram-skewed.png" alt="" />
                   <path d="M160 120 H400 V60 H600" fill="none" />
               </svg>
-              <a href="#" class="btn">Telegram<br>@NFTBOT</a>
+              <a href="https://t.me/DIgital_Human_NFT_bot" class="btn">Telegram<br>@NFTBOT</a>
               <!-- <h2>Здесь будет телега</h2> -->
           </div>
           <div class="words-monitor">
@@ -221,6 +187,188 @@
               </svg>
           </div>
       </section>
+      <section id="howToBuy">
+        <div class="container">
+          <div class="howToBuy__inner">
+            <h1>Как купить?</h1>
+            <p>Чтобы приобрести свой Digital Human NFT, Вам понадобятся IGUMA tokens, внутренняя криптовалюта, которую можно купить в нашем специализированном Telegram-боте или на бирже.</p>
+            <p>Кроме того, с помощью внутренней криптовалюты IGUMA tokens можно заработать! Как? Смотрите в разделе Токеномика!</p>
+            <div class="buy-map">
+              <div class="punct right">
+                <span class="order clip">1</span>
+                <p class="instruction">Перейдите в<a href="https://t.me/DIgital_Human_NFT_bot"> Telegram-бот</a></p>
+              </div>
+              <div class="punct left">
+                <span class="order">2</span>
+                <p class="instruction">Введите свой MetaMask или TrustWallet кошелек</p>
+              </div>
+              <div class="punct right">
+                <span class="order">3</span>
+                <p class="instruction">Следуя инструкциям в боте, пополните баланс криптовалютой IGUMA token</p>
+              </div>
+              <div class="punct left">
+                <span class="order">4</span>
+                <p class="instruction">Зайдите в раздел бота NFT каталог</p>
+              </div>
+              <div class="punct right">
+                <span class="order">5</span>
+                <p class="instruction">Купите нужный NFT</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="tokenomics">
+        <div class="container">
+          <div class="tokenomics__inner">
+            <h1 class="title">Токеномика</h1>
+            <div class="description">
+              <svg class="quote" viewport="0 0 1100 108" xmlns="http://www.w3.org/2000/svg" height="100">
+                <g class="quotes left" width="100%">
+                  <path d="M 30 0
+                           l -30 16
+                           v 56
+                           l 30 16"/>
+                  <path d="M 60 0
+                           l -30 16
+                           v 56
+                           l 30 16"/>
+                </g>
+                <foreignObject x="60" y="20" width="980" height="59">
+                  <p xmlns="http://www.w3.org/1999/xhtml">
+                    IGUMA token - дефляционный токен платформы в сети BSC, с помощью которого можно купить Digital Human NFT
+                  </p>
+                </foreignObject>
+                <g class="quotes right">
+                  <path d="M 1070 0
+                           l 30 16
+                           v 56
+                           l -30 16"/>
+                  <path d="M 1040 0
+                           l 30 16
+                           v 56
+                           l -30 16"/>
+                </g>
+              </svg>
+              <p>Создан исходя из количества людей, зарегистрированных на Земле - 7,9 миллиардов человек.</p>
+              <div class="chart">
+                <chartist
+                  ratio="ct-square"
+                  type="Pie"
+                  :data="chartData"
+                  :options="chartOptions"
+                  :responsiveOptions="responsiveOptions">
+                </chartist>
+                <div class="legend">
+                  <div class="legend__item transactions">
+                    <p class="percent">94%</p>
+                    <p class="description">чистая сумма транзакции</p>
+                  </div>
+                  <div class="legend__item burn">
+                    <span class="percent">1%</span>
+                    <p class="description">сжигается</p>
+                  </div>
+                  <div class="legend__item holders">
+                    <span class="percent">2%</span>
+                    <p class="description">распределяется между всеми холдерами IGUMA</p>
+                  </div>
+                  <div class="legend__item fee">
+                    <span class="percent">3%</span>
+                    <p class="description">комиссия в банк ликвидности</p>
+                  </div>
+                </div>
+              </div>
+              <div class="referrals">
+                <p>Вы также можете заработать 5%, пригласив нового участника по Вашей реферальной ссылке</p>
+                <div class="telegram">
+                    <svg viewBox="0 0 600 200">
+                        <image href="img/telegram-skewed.png" alt="" />
+                        <path d="M160 120 H400 V60 H600" fill="none" />
+                    </svg>
+                    <a href="https://t.me/DIgital_Human_NFT_bot" class="btn">Telegram<br>@NFTBOT</a>
+                </div>
+                <object data="" type="" class="five-percent">
+                  <img src="img/tokenomics-reffs.svg" alt="">
+                </object>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="roadmap">
+        <div class="container">
+          <div class="roadmap__inner">
+            <nav>
+              <h1>Дорожная карта</h1>
+              <div class="arrows">
+                <svg class="left disabled" width="512pt" height="512pt" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g id="#000000ff">
+<path fill="var(--lineColor)" opacity="1.00" d=" M 120.07 131.12 C 122.89 128.39 126.98 126.86 130.89 127.74 C 136.82 128.83 141.19 135.16 139.88 141.10 C 139.15 145.50 135.46 148.42 132.55 151.47 C 101.63 182.40 70.65 213.28 39.79 244.27 C 190.86 244.36 341.94 244.29 493.01 244.31 C 497.58 244.40 502.64 243.69 506.69 246.33 C 509.83 248.29 511.49 251.86 512.00 255.43 L 512.00 256.47 C 511.52 262.98 505.55 268.03 499.07 267.58 C 345.97 267.64 192.87 267.55 39.77 267.62 C 70.79 298.80 101.92 329.86 132.99 360.98 C 136.38 364.19 140.27 367.93 140.09 373.00 C 140.28 379.67 133.75 385.46 127.14 384.40 C 123.60 384.15 120.92 381.67 118.52 379.33 C 81.71 342.53 44.89 305.73 8.08 268.92 C 4.50 265.50 0.47 261.79 0.00 256.53 L 0.00 255.47 C 0.41 252.01 2.20 248.91 4.67 246.51 C 43.15 208.05 81.60 169.58 120.07 131.12 Z" />
+</g>
+</svg>
+                <svg class="right" width="512pt" height="512pt" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g id="#000000ff">
+<path fill="var(--lineColor)" opacity="1.00" d=" M 376.67 129.70 C 381.48 126.00 388.67 127.24 392.52 131.75 C 430.84 169.95 469.05 208.26 507.34 246.49 C 509.85 248.93 511.64 252.10 512.00 255.62 L 512.00 256.30 C 511.68 259.80 509.91 262.96 507.42 265.40 C 469.90 302.91 432.38 340.42 394.88 377.95 C 391.96 381.08 388.50 384.44 383.92 384.48 C 377.62 384.95 371.75 379.30 371.91 373.01 C 371.75 369.00 374.27 365.65 377.00 363.00 C 408.75 331.23 440.54 299.50 472.26 267.71 C 321.18 267.67 170.10 267.70 19.02 267.69 C 14.24 267.59 8.83 268.38 4.76 265.28 C 1.88 263.25 0.45 259.81 0.00 256.41 L 0.00 255.77 C 0.31 249.19 6.33 243.98 12.87 244.43 C 166.00 244.36 319.13 244.44 472.27 244.39 C 440.04 212.05 407.72 179.80 375.49 147.47 C 370.41 142.72 370.84 133.64 376.67 129.70 Z" />
+</g>
+</svg>
+              </div>
+            </nav>
+            <div class="timeline-slider">
+              <div class="timeline">
+                <div class="step">
+                  <div class="date">
+                    <h4>2021</h4>
+                    <h1>Q4</h1>
+                  </div>
+                  <ul class="events">
+                    <li>Разработка программного кода IGUMA token</li>
+                    <li>Разработка NFT маркетплейса в Telegram</li>
+                    <li>Разработка фирменной символики и сайта</li>
+                  </ul>
+                </div>
+                <div class="step">
+                  <div class="date">
+                    <h4>2022</h4>
+                    <h1>Q1</h1>
+                  </div>
+                  <ul class="events">
+                    <li>Запуск чатов Telegram</li>
+                    <li>Запуск Бота Telegram</li>
+                    <li>Запуск NFT маркетплейса</li>
+                    <li>Запуск веб-сайта</li>
+                  </ul>
+                </div>
+                <div class="step">
+                  <div class="date">
+                    <h4>2022</h4>
+                    <h1>Q2</h1>
+                  </div>
+                  <ul class="events">
+                    <li>Запуск системы на основе нейросети для создания личного NFT</li>
+                    <li>Аудит кода</li>
+                    <li>Официальный мерч, мемы, PR</li>
+                    <li>Листинг Iguma token на COINGECKO и COINMARKETCAP</li>
+                    <li>Технический документ</li>
+                  </ul>
+                </div>
+                <div class="step">
+                  <div class="date">
+                    <h4>2022</h4>
+                    <h1>Q3</h1>
+                  </div>
+                  <ul class="events">
+                    <li>Совместимость с Somnium Space VRR</li>
+                    <li>Короткометражные фильмы с участием Digital human</li>
+                    <li>Интеграция Digital Human NFT в систему KYC</li>
+                    <li>Листинг Iguma token на COINGECKO и COINMARKETCAP</li>
+                    <li>Выход Digital Human NFT как аналог ЭЦП (электронной цифровой подписи) и KYC</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
         </main>
         <div class="intro">
           <div class="text">
@@ -242,215 +390,35 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
-import { DrawSVGPlugin } from '~/node_modules/gsap/DrawSVGPlugin.js';
-import { ScrollToPlugin } from '~/node_modules/gsap/ScrollToPlugin.js';
-import { TextPlugin } from '~/node_modules/gsap/TextPlugin.js';
-import { ScrollTrigger } from '~/node_modules/gsap/ScrollTrigger.js';
-
-if (process.client) {
-  gsap.registerPlugin(DrawSVGPlugin, ScrollToPlugin, TextPlugin, ScrollTrigger);
-}
+import animateMainPage from '~/static/js/main_animations.js'
 
 export default {
-  head: {
-    script: [
-      // {src: 'app.js', body: true}
-    ]
+  data() {
+    return {
+      chartData: {
+        labels: ['transaction', 'burn', 'holders', 'fee'],
+        series: [94, 1, 2, 3]
+      },
+      chartOptions: {
+        // linesmooth: false,
+        donut: true,
+        donutWidth: 20,
+        donutSolid: false,
+        labels: false,
+        width: "400px",
+        height: "400px",
+        startAngle: 40,
+      },
+      responsiveOptions: [
+        ['screen and (max-width: 767.98px)', {
+          width: "350px",
+          height: "350px"
+        }]
+      ]
+    }
   },
   mounted() {
-
-let black = '#00241b';
-let white = '#f5f5f5';
-let green = '#7ccf9e';
-
-let logo = document.querySelector('#logo');
-let header = document.querySelector('header');
-let sections = gsap.utils.toArray('section');
-
-
-// Scroll to top when reloading page
-window.onbeforeunload = () => {
-    window.scrollTo(0, 0);
-};
-
-
-// Intro animation
-
-// Intro page
-
-let introSlider = document.querySelector('.intro')
-let introTextField = document.querySelector('.intro h1.code-text');
-let introButton = document.querySelector('.intro button')
-let introWords = ['аватар', 'DeepFake', 'цифровая_личность', 'метавселенная', 
-                  'безопасность', 'цифровой_актив', 'Вы'];
-let igumaIs = document.querySelector('.intro .static');
-let colors = [white, green];
-
-
-function shuffleArrayWithColor(array, colors) {
-    for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]]
-    }
-    for (let i = array.length - 1; i >= 0; i--) {
-        let binaryJ = Math.round(Math.random());
-        array[i] = [array[i], colors[binaryJ]]
-    }
-}
-
-
-shuffleArrayWithColor(introWords, colors);
-
-let sliderTl = gsap.timeline();
-sliderTl
-        .to(igumaIs, {x: "0", opacity: 1, duration: .5, delay: .5})
-        .to(introButton, {opacity: 1}, "0+=.75")
-
-
-let sliderWordsTl = gsap.timeline({repeat: -1});
-introWords.forEach(word => {
-    let localTl = gsap.timeline({repeatDelay: .5, repeat: 1, yoyo: true});
-    localTl.to(introTextField, {text: {value: word[0]+'.', delimiter: ""}, duration: .5});
-    sliderWordsTl.add(localTl);
-});
-
-sliderTl.add(sliderWordsTl);
-
-// Intro main page
-
-let startButton = document.querySelector('.intro button');
-startButton.addEventListener('click', () => {
-  introTl.play();
-});
-
-let bannerTitle = document.querySelector('#banner .description h1');
-let bannerImage = document.querySelector('#banner .clip-img img');
-let bannerDescription = document.querySelector('#banner .description p');
-let beehivesFirst = gsap.utils.toArray('#banner .beehive-first img');
-let beehivesSecond = gsap.utils.toArray('#banner .beehive-second img');
-let unions = gsap.utils.toArray('#banner img.union');
-let telegramSVG = document.querySelector('#banner .telegram svg');
-let telegramPath = document.querySelector('#banner .telegram path');
-let telegramButton = document.querySelector('#banner .telegram a');
-let wordsMonitor = document.querySelector('.words-monitor');
-let notBannerSection = gsap.utils.toArray('main section:not(:first-child)');
-
-let introTl = gsap.timeline({paused: true});
-introTl.to(window, {scrollTo: "0", duration: .25})
-       .to(introSlider, {y: "100%", duration: .5})
-       .call(() => introSlider.classList.toggle('hidden'))
-       .from(bannerTitle, {x: "-100%", y: "0", opacity: 0})
-       .from(bannerDescription, {x: "-100%", y: "0", opacity: 0}, "-=.35")
-       .from(bannerImage, {x: "100%", opacity: 0}, "-=.35")
-       .from(unions, {x: "-100%", opacity: 0, stagger: .15}, "-=.35")
-       .addLabel('startBeehives')
-       .from(beehivesFirst, {opacity: 0, stagger: .1}, "startBeehives-=.35")
-       .from(beehivesSecond, {opacity: 0, stagger: .1}, 'startBeehives-=.3')
-       .from(header, {y: "-100%", opacity: 0}, "startBeehives-=.35")
-       .from(telegramSVG, {y: "100%", opacity: 0}, "startBeehives-=.35")
-       .from(telegramPath, {drawSVG: "0%"}, "startBeehives")
-       .from(telegramButton, {opacity: 0}, "startBeehives+=.3")
-       .from(wordsMonitor, {x: "100%", opacity: 0}, "startBeehives+=.3")
-       .from(notBannerSection, {opacity: 0});
-
-
-// Burger menu animation
-
-function showBurgerMenu() {
-  headerNav.classList.toggle('active');
-  headerNav.classList.toggle('shadow');
-  burger.classList.toggle('active');
-}
-
-let burger = document.querySelector('#burger');
-let headerNav = document.querySelector('header nav');
-let main = document.querySelector('main');
-let navLinks = document.querySelectorAll('header nav a');
-
-let mobileMedia = window.matchMedia('screen and (max-width: 767px)');
-
-if (mobileMedia.matches) {
-  burger.addEventListener('click', () => showBurgerMenu());
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => showBurgerMenu())
-  });
-};
-
-// Words monitor in #banner (random show words in div)
-
-
-function randomNummberInRange(n) {
-  let randomNumner = Math.ceil(Math.random() * n);
-  return Number(randomNumner);
-};
-
-function chooseMonitorPlace() {
-  let choosenMonitorTitle = wordsMonitorTitles[randomNummberInRange(3)-1];
-  return choosenMonitorTitle;
-};
-
-function chooseMonitorWord() {
-  let choosenWord = introWords[randomNummberInRange(introWords.length-1)];
-  return String(choosenWord[0]);
-};
-
-function wordsMonitorAnimate() {
-  let place = chooseMonitorPlace();
-  let word =  chooseMonitorWord(); 
-  let wordsMonitorTl = gsap.timeline({
-    onComplete: wordsMonitorAnimate,
-    defaults: {ease: "power4.out"}
-    });
-  wordsMonitorTl.to(place, {text: {value: word, delimiter: " "}, delay: 1, opacity: Math.random(), duration: .5})
-                .to(place, {text: {value: " ", delimiter: " "}, opacity: 0});
-};
-
-let wordsMonitorTitles = document.querySelectorAll('.words-monitor h2');
-
-wordsMonitorAnimate();
-
-// White bg to dark bg animation
-let burgerLines = gsap.utils.toArray('#burger div');
-let sphereSection = document.querySelector('section#sphere__section');
-let spherePaths = gsap.utils.toArray('#sphere__section path');
-let blackLetters = logo.getElementById('#000000ff').querySelectorAll('path');
-blackLetters = gsap.utils.toArray(blackLetters);
-
-
-// When scrolling to #sphere__section, colors changes to dark
-window.addEventListener('scroll', () => {
-  let sphereTop = sphereSection.getBoundingClientRect().top;
-  if (sphereTop <= 200) {
-    darkBgTl.play();
-  } else {
-    darkBgTl.reverse();
-  }
-});
-
-let darkBgTl = gsap.timeline({
-    // scrollTrigger: {
-    //     trigger: sphereSection,
-    //     scrub: true,
-    //     start: "top center",
-    //     end: "center center"
-    // },
-    defaults: {
-        ease: "power1.out"
-    },
-    paused: true
-});
-
-darkBgTl.addLabel('start')
-        // .to(header, {background: white}, "start")
-        .to('body', {background: black, ease: "power1.out"}, "start")
-        .to(sections, {background: black, color: white, stroke: green, fill: green}, "start")
-        .to(header, {background: black, color: green, borderBottom: '0px', ease: "power4.out"}, "start")
-        .to(burgerLines, {backgroundColor: white}, "start")
-        .to(blackLetters, {fill: "var(--background)"}, "start")
-        .from(spherePaths, {drawSVG: 0})
-
-  }
+    animateMainPage();
+  },
 }
 </script>

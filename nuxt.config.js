@@ -15,9 +15,13 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
+      { src: 'https://code.jquery.com/jquery-3.6.0.min.js', 
+        integrity: 'sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=',
+        crossorigin: 'anonymos'
+      }
       // { src: 'node_modules/gsap/DrawSVGPlugin.js' },
       // { src: 'node_modules/gsap/ScrollToPlugin.js' },
       // { src: 'node_modules/gsap/TextPlugin.js' },
@@ -39,6 +43,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/vue-chartist.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
