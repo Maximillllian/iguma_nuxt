@@ -1,18 +1,25 @@
 <template>
-    <div>
-        <HeaderSite />
+    <div class="overflow-container">
+        <TheHeader />
         <Nuxt />
-        <FooterSite />
+        <TheFooter />
     </div>
 </template>
 
 <script>
-import HeaderSite from "~/components/HeaderSite"
-import FooterSite from "~/components/FooterSite"
+import TheHeader from "~/components/TheHeader"
+import TheFooter from "~/components/TheFooter"
+
 export default {
     components: {
-        HeaderSite,
-        FooterSite
+        TheHeader,
+        TheFooter
     }
 }
 </script>
+
+<style>
+    .overflow-container {
+        overflow-x: hidden;
+    }
+</style>
